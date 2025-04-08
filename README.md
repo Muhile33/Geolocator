@@ -25,13 +25,13 @@
 git clone https://github.com/Muhile33/Geolocator.git
 cd geospy-cli
 
-chmod +x install_geostalker.sh
-./install_geostalker.sh
+chmod +x install_geospy.sh
+./install_geospy.sh
 ```
 ## 2. Run the Installer 
 
 ```bash
-chmod +x install_geostalker.sh
+chmod +x install_geospy.sh
 ./install_geospy.sh
 ```
 This will:
@@ -45,15 +45,15 @@ This will:
 ## 🚀 Usage
 
 ```bash
-geostalker username <instagram_username>
-geostalker ip <ip_address>
+geospy username <instagram_username>
+geospy ip <ip_address>
 ```
 
 ### Example
 
 ```bash
-geostalker username nasa
-geostalker ip 1.1.1.1
+geospy username nasa
+geospy ip 1.1.1.1
 ```
 
 > A browser window will open with interactive map markers of posts or IP coordinates.
@@ -74,6 +74,8 @@ Created by [@Muhile33] <br>
 Powered by Python, caffeine, and tactical recon skills ☕🖥️🕵️‍♂️ <br>
 ASCII banner: pyfiglet <br>
 Open source is the weapon. Use it wisely.
+
+### Feel free to pull request or issues
 
 ## 💣 Stay Tactical. Stay Informed.
 > “Recon defines the battlefield.” — Ghost Protocol 🛰️

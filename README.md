@@ -22,8 +22,8 @@
 ### 1. Clone the Repo
 
 ```bash  
-git clone https://github.com/yourusername/geostalker-cli.git
-cd geostalker-cli
+git clone https://github.com/Muhile33/Geolocator.git
+cd geospy-cli
 
 chmod +x install_geostalker.sh
 ./install_geostalker.sh
@@ -32,7 +32,7 @@ chmod +x install_geostalker.sh
 
 ```bash
 chmod +x install_geostalker.sh
-./install_geostalker.sh
+./install_geospy.sh
 ```
 This will:
 

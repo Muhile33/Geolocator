@@ -23,7 +23,9 @@
 
 ```bash  
 git clone https://github.com/Muhile33/Geolocator.git
-cd geospy-cli
+cd Geolocater
+cd geolocater
+cd geospy
 
 chmod +x install_geospy.sh
 ./install_geospy.sh

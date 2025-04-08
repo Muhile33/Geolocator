@@ -1,4 +1,4 @@
-# 🛰️ GeoStalker
+# 🛰️ GeoSpy
 
 **GeoStalker** is a tactical OSINT recon tool for Linux systems like **Kali**, **Parrot OS**, and **BlackArch**. It lets you map **Instagram usernames** to potential GPS coordinates (from public posts) and locate **IP addresses** with real-world precision using geolocation APIs.
 

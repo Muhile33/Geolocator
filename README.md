@@ -24,7 +24,7 @@ It helps you map **Instagram usernames** (from public post metadata) and geoloca
 
 ```bash
 git clone https://github.com/Muhile33/Geolocator.git
-cd geostalker-cli
+cd GeoStalker
 ```
 ### 2. Make the Installer Executable
 ```bash

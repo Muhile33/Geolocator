@@ -1,83 +1,86 @@
-# 🛰️ GeoSpy
+# 🛰️ GeoStalker
 
-**GeoStalker** is a tactical OSINT recon tool for Linux systems like **Kali**, **Parrot OS**, and **BlackArch**. It lets you map **Instagram usernames** to potential GPS coordinates (from public posts) and locate **IP addresses** with real-world precision using geolocation APIs.
+**GeoStalker** is a tactical OSINT recon tool for Linux systems like **Kali**, **Parrot OS**, and **BlackArch**.  
+It helps you map **Instagram usernames** (from public post metadata) and geolocate **IP addresses** using terminal commands and slick browser-based maps.
 
-> Designed for ethical hackers, red teamers, OSINT pros, and cyber sleuths.
+> 🛡️ For educational and ethical red team ops only. Respect privacy laws.
 
 ---
 
 ## ⚔️ Features
 
-- 🔍 Scrape public Instagram profile data
-- 🌐 Track and map IP addresses
-- 🗺️ Render interactive maps in-browser
-- 💻 Built-in CLI with ASCII banners and colored output
-- 🔐 Virtual environment for safe, isolated usage
-- 💥 Global command access like a native Linux tool
+- 🔎 Scan public Instagram accounts for geotag data
+- 🌍 Geolocate IP addresses with high accuracy
+- 🗺️ Render data as interactive HTML maps
+- 🧠 Intelligent CLI commands
+- 🎯 Runs fully offline (except IP geolocation lookups)
+- ☠️ “Military-grade” Python backend
 
 ---
 
-## 🛠️ Installation (Military-Grade)
+## 🛠️ Installation
 
 ### 1. Clone the Repo
 
-```bash  
-git clone https://github.com/Muhile33/Geolocator.git
-cd Geolocater
-cd geolocater
-cd geospy
-
-chmod +x install_geospy.sh
-./install_geospy.sh
-```
-## 2. Run the Installer 
-
 ```bash
-chmod +x install_geospy.sh
-./install_geospy.sh
+git clone https://github.com/yourusername/geostalker-cli.git
+cd geostalker-cli
 ```
-This will:
-
--✅ Set up a virtual environment
-
-+📦 Install all required Python dependencies
-
-*🔗 Link the CLI command geostalker globally
-
-## 🚀 Usage
-
+### 2. Make the Installer Executable
 ```bash
-geospy username <instagram_username>
-geospy ip <ip_address>
+chmod +x install_geostalker.sh
 ```
 
-### Example
-
+### 3. Run the Installer
 ```bash
-geospy username nasa
-geospy ip 1.1.1.1
+./install_geostalker.sh
 ```
 
-> A browser window will open with interactive map markers of posts or IP coordinates.
+### This will
 
-### Install them manually if needed
+*Create a Python virtual environment
 
+*Install all requirements
+
+*Symlink geostalker globally to /usr/local/bin
+
+### 🚀 Usage
 ```bash
-pip install -r requirements.txt
+geostalker username <instagram_username>
+geostalker ip <ip_address>
 ```
 
-## 🛡️ Legal Notice
-> This tool is provided for educational and ethical purposes only.
-> Use it responsibly and do not violate any privacy laws.
-> The developer assumes no liability for misuse.
+### ✅ Examples
+```bash
+geostalker username nasa
+geostalker ip 1.1.1.1
+```
+📍 A browser window will open showing a map with coordinates.
 
-## 🧠Credits
+### 📁 Project Structure
+```pgsql
+geostalker-cli/
+├── geostalker             ← CLI wrapper (executable)
+├── geostalkermain.py      ← Main OSINT engine (functions)
+├── install_geostalker.sh  ← Setup script
+├── requirements.txt
+```
+> The geostalker script adds its folder to sys.path so geostalkermain.py is imported <br>
+> cleanly. <br>
+> No module import errors anymore.
+
+### 📛 Disclaimer
+GeoStalker is intended for legal & educational purposes only.
+
+❌ Do NOT use this to harass or track people.
+
+✅ Use it in CTFs, pentests, recon, threat intel, bug bounty, and OSINT projects.
+
+### 🧠 Author
 Created by [@Muhile33] <br>
-Powered by Python, caffeine, and tactical recon skills ☕🖥️🕵️‍♂️ <br>
-ASCII banner: pyfiglet <br>
-Open source is the weapon. Use it wisely.
+Built with 💻 Python + ☕ coffee + 📡 recon mindset. <br>
+Stay stealthy. Stay smart. Stay sharp.
 
-### Feel free to pull request or issues
-
-## 💣 Stay Tactical. Stay Informed.
-> “Recon defines the battlefield.” — Ghost Protocol 🛰️
+### 💣 Final Words
+> The quieter you become, the more you can hear.” <br>
+> ― Tactical wisdom

@@ -76,6 +76,10 @@ GeoStalker is intended for legal & educational purposes only.
 
 ✅ Use it in CTFs, pentests, recon, threat intel, bug bounty, and OSINT projects.
 
+### Ignore 
+- geolocater directory go for Geostalker
+- geolocater.html
+
 ### 🧠 Author
 Created by [@Muhile33] <br>
 Built with 💻 Python + ☕ coffee + 📡 recon mindset. <br>

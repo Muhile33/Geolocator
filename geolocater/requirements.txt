@@ -1,6 +1,0 @@
-instaloader
-geopy
-folium
-termcolor
-pyfiglet
-requests

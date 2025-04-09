@@ -38,11 +38,11 @@ chmod +x install_geostalker.sh
 
 ### This will
 
-*Create a Python virtual environment
+* Create a Python virtual environment
 
-*Install all requirements
+* Install all requirements
 
-*Symlink geostalker globally to /usr/local/bin
+* Symlink geostalker globally to /usr/local/bin
 
 ### 🚀 Usage
 ```bash

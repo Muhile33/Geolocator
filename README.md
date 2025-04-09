@@ -23,7 +23,7 @@ It helps you map **Instagram usernames** (from public post metadata) and geoloca
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/yourusername/geostalker-cli.git
+git clone https://github.com/Muhile33/Geolocator.git
 cd geostalker-cli
 ```
 ### 2. Make the Installer Executable

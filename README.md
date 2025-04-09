@@ -85,6 +85,11 @@ Created by [@Muhile33] <br>
 Built with 💻 Python + ☕ coffee + 📡 recon mindset. <br>
 Stay stealthy. Stay smart. Stay sharp.
 
+## 📝 License
+
+This project is licensed under the [MIT License](CreateLICENSE).
+
+
 ### 💣 Final Words
 > The quieter you become, the more you can hear.” <br>
 > ― Tactical wisdom

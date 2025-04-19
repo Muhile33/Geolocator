@@ -1,41 +1,42 @@
 import argparse
-import sys
-from modules.ig_lookup import lookup_instagram_profile
-from modules.geo_photo import extract_geotag
-from modules.webcam_trace import trace_webcam_from_ig
-from modules.report_gen import generate_report
-from modules.tor_proxy import use_tor_proxy
-from modules.vision_match import match_face
+from modules import (
+    Instagram_recon, ip_geolocator, image_geotag, vision_match, tor_proxy,
+    report_gen, discord_telegram_recon, map_view, drone_recon,
+    username_search, breach_check
+)
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="GeoStalker OSINT Tool")
-    parser.add_argument('--target', required=True, help="Target username or email")
-    parser.add_argument('--platform', required=True, choices=['instagram', 'email'], help="Platform to target (Instagram or Email)")
-    parser.add_argument('--type', required=True, choices=['trace', 'report', 'proxy', 'vision'], help="Action type")
-    parser.add_argument('--output', choices=['pdf', 'html'], help="Output format for reports (only for report action)")
-    parser.add_argument('--mode', choices=['face_match', 'scene_match'], help="Face/Scene matching mode (only for vision action)")
-    return parser.parse_args()
+parser = argparse.ArgumentParser(description="GeoStalker - OSINT Recon Tool")
 
-def main():
-    args = parse_args()
-    
-    if args.type == "trace":
-        if args.platform == "instagram":
-            print(trace_webcam_from_ig(args.target))
-        # Other platforms can be added later
-    
-    elif args.type == "report":
-        if args.platform == "instagram":
-            result = trace_webcam_from_ig(args.target)
-            if args.output:
-                generate_report(result, output_format=args.output)
-    
-    elif args.type == "proxy":
-        use_tor_proxy()
+parser.add_argument("--insta", help="Instagram username")
+parser.add_argument("--ip", help="IP address")
+parser.add_argument("--image", help="Path to image with EXIF")
+parser.add_argument("--match", nargs=2, help="Compare 2 faces/images")
+parser.add_argument("--tor", help="Use Tor to access a URL")
+parser.add_argument("--report", action="store_true", help="Generate PDF Report")
+parser.add_argument("--discord", help="Discord tag")
+parser.add_argument("--telegram", help="Telegram @username")
+parser.add_argument("--map", nargs=2, help="Generate map from lat lon")
+parser.add_argument("--drone", help="Folder path with drone images")
+parser.add_argument("--username", help="Username to scan across platforms")
+parser.add_argument("--breach", help="Email to check breach status")
 
-    elif args.type == "vision":
-        if args.mode == "face_match":
-            match_face(args.target)  # For future face/scene matching
+args = parser.parse_args()
 
-if __name__ == "__main__":
-    main()
+if args.insta: Instagram_recon.recon_instagram(args.insta)
+if args.ip: ip_geolocator.locate_ip(args.ip)
+if args.image: image_geotag.trace_image(args.image)
+if args.match: vision_match.compare_faces(args.match[0], args.match[1])
+if args.tor: tor_proxy.tor_request(args.tor)
+if args.report:
+    data = {
+        "Recon Summary": "Placeholder summary for now. (Fill later.)"
+    }
+    report_gen.generate_pdf_report(data)
+if args.discord: discord_telegram_recon.recon_discord(args.discord)
+if args.telegram: discord_telegram_recon.recon_telegram(args.telegram)
+if args.map: map_view.create_trace_map(float(args.map[0]), float(args.map[1]))
+if args.drone: drone_recon.process_drone_images(args.drone)
+if args.username: username_search.search_username(args.username)
+if args.breach: breach_check.check_breach(args.breach)
+
+

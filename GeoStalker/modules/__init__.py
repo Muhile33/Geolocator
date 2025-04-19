@@ -1,4 +1,4 @@
-from .ig_lookup import lookup_instagram_profile
+from .Instagram_recon import lookup_instagram_profile
 from .geo_photo import extract_geotag
 from .webcam_trace import trace_webcam_from_ig
 from .tor_proxy import use_tor_proxy

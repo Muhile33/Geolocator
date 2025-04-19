@@ -1,0 +1,7 @@
+{
+    "twitter": { "url": "https://twitter.com/{}", "active_check": true },
+    "github": { "url": "https://github.com/{}", "active_check": true },
+    "reddit": { "url": "https://reddit.com/user/{}", "active_check": true },
+    "instagram": { "url": "https://instagram.com/{}/", "active_check": true }
+  }
+  

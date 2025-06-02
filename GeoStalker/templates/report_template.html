@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ data.title }}</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #121212; color: #eee; padding: 20px; }
+    h1 { color: #00FFAA; }
+    ul { list-style: none; padding: 0; }
+    li { background: #222; margin: 10px 0; padding: 10px; border-radius: 8px; }
+    strong { color: #00FFAA; }
+  </style>
+</head>
+<body>
+  <h1>{{ data.title }}</h1>
+  <ul>
+  {% for entry in data.entries %}
+    <li><strong>{{ entry.name }}:</strong> {{ entry.result }}</li>
+  {% else %}
+    <li>No results found.</li>
+  {% endfor %}
+  </ul>
+</body>
+</html>
+

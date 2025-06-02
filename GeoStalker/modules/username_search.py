@@ -1,21 +1,39 @@
-import requests, json, random
+import requests
+from color_utils.printx import print_success, print_error, print_info
+import json
+import os
 
-def search_username(username):
-    with open("Data/platforms.json") as f:
-        platforms = json.load(f)
-    with open("Data/user_agents.txt") as f:
-        agents = f.read().splitlines()
+PLATFORMS_FILE = os.path.join(os.path.dirname(__file__), '../data/platforms.json')
 
-    print(f"[+] Stealth username recon for: {username}")
-    for platform, data in platforms.items():
-        url = data["url"].format(username)
-        headers = {'User-Agent': random.choice(agents)}
+def load_platforms():
+    try:
+        with open(PLATFORMS_FILE) as f:
+            return json.load(f)
+    except Exception as e:
+        print_error(f"Failed to load platforms.json: {e}")
+        return {}
+
+def username_lookup(username):
+    platforms = load_platforms()
+    results = {}
+    print_info(f"Searching username '{username}' on platforms...")
+    for platform in platforms.get("platforms", []):
+        url = platform.get("url").replace("{username}", username)
         try:
-            r = requests.get(url, headers=headers, timeout=5)
+            r = requests.get(url)
             if r.status_code == 200:
-                print(f"[FOUND] {platform}: {url}")
+                results[platform["name"]] = url
+                print_success(f"Found on {platform['name']}: {url}")
             else:
-                print(f"[--] {platform}: Not found")
-        except:
-            print(f"[!!] Error checking {platform}")
+                print_info(f"Not found on {platform['name']}")
+        except Exception as e:
+            print_error(f"Error checking {platform['name']}: {e}")
+    return results
 
+if __name__ == "__main__":
+    import sys
+    if len(sys.argv) != 2:
+        print("Usage: python username_lookup.py <username>")
+        sys.exit(1)
+    uname = sys.argv[1]
+    username_lookup(uname)

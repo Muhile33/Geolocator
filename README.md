@@ -4,22 +4,17 @@
 > Instagram users, email addresses, webcams, geotags & more — built for **hunters**.
 
 ---
-# 🌍 GeoStalker
-
-**GeoStalker** is a powerful Linux-based OSINT (Open Source Intelligence) tool designed for deep reconnaissance using social media, IP tracing, geotagged media, facial recognition, and more. Optimized for Kali Linux, Parrot OS, and other ethical hacking environments.
-
----
 
 ## ⚡ Features
 
-✅Instagram Recon
-✅Image Geotag Extraction
-✅ Vision Matching (Experimental)
-✅ Drone Recon (Mock AI)
-✅ Username Search (150+ platforms)
-✅ IP + Email Trace
-✅ Discord/Telegram User Check
-✅ HTML Report Generator
+✅Instagram Recon <br>
+✅Image Geotag Extraction <br>
+✅ Vision Matching (Experimental) <br>
+✅ Drone Recon (Mock AI) <br>
+✅ Username Search (150+ platforms) <br>
+✅ IP + Email Trace <br>
+✅ Discord/Telegram User Check <br>
+✅ HTML Report Generator <br>
 ✅ Tor Proxy Support
 
 ---

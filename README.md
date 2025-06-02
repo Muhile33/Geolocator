@@ -12,19 +12,15 @@
 
 ## ⚡ Features
 
-✅ Instagram Username Recon  
-✅ IP Address Geolocation  
-✅ Image Geotag Tracer (EXIF Analyzer)  
-✅ Vision Matching Engine (Face comparison)  
-✅ Email Breach Checker (HaveIBeenPwned)  
-✅ Discord / Telegram Recon  
-✅ Username Cross-Platform Search (over 50 platforms)  
-✅ Tor Proxy Support (Anonymous Requests)  
-✅ Drone Recon Image Edge Detection  
-✅ Interactive Map Trace Generator (Folium-based)  
-✅ PDF/HTML Recon Report Generator  
-✅ CLI-Based Interface (Color-coded + Bash installer)  
-✅ Modular Core for Extension
+✅Instagram Recon
+✅Image Geotag Extraction
+✅ Vision Matching (Experimental)
+✅ Drone Recon (Mock AI)
+✅ Username Search (150+ platforms)
+✅ IP + Email Trace
+✅ Discord/Telegram User Check
+✅ HTML Report Generator
+✅ Tor Proxy Support
 
 ---
 
@@ -48,6 +44,8 @@ chmod +x install.sh
 
 ### 📛 Disclaimer
 GeoStalker is intended for legal & educational purposes only.
+some APIs (HIBP, Discord) requires token or have rate limits.
+drone recon is a stub for experimental AI recon.
 
 ❌ Do NOT use this to harass or track people.
 

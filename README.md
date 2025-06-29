@@ -31,7 +31,7 @@
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/yourusername/GeoStalker.git
+git clone https://github.com/Muhile33/Geolocator.git
 cd GeoStalker
 chmod +x install.sh
 ./install.sh
